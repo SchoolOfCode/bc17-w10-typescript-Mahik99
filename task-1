@@ -1,0 +1,37 @@
+// Using type inference.
+const helloMessage= "Hello Mahik!";
+const height= 140;
+const isHungry= true;
+const isVeryHungry= [true, false];
+const allHeightValues= [140, 159, 166, 178];
+const favourtieColours= ["Pink", "Brown", "Blue", "Green"];
+
+// Using explicit type annotation
+const message: string = "Hello Mahik!";
+const age: number = 50;
+const isLoggedIn: boolean[] = [true, false];
+const ageOfAllUsers: number[] = [20, 25, 38, 18];
+const nameOfAllUsers: string[] = ["Dave", "Steve", "Amanda", "Jessica"];
+
+// Type annotation function for sum of numbers, paramaters and return
+function sum (num1:number, num2:number) :number {
+return num1 + num2
+};
+
+// new type that describes an object using keys amount: a number , uniqueId: a string, isValid: a boolean, addressLines: an array of strings
+
+type User= {
+amount: number,
+uniqueId: string,
+isValid: boolean,
+addressLines: string[]
+}
+
+// new type alias named Colour which is either: "BLUE" or "YELLOW"
+type Colour = "BLUE" | "YELLOW";
+let favColour: Colour;
+// Invalid
+favColour = 7
+
+// Valid
+favColour = "BLUE"
